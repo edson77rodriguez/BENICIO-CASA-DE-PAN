@@ -6,6 +6,7 @@
     <title>Benicio, Casa de Pan | Comida Yucateca en Valle de Bravo</title>
     <meta name="description" content="Restaurante especializado en comida Yucateca, pizzas artesanales, panadería tradicional y café rioplatense en Valle de Bravo">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Handlee&display=swap" rel="stylesheet">
     <style>
         /* Reset y Estilos Base */
         * {
@@ -15,13 +16,14 @@
         }
 
         :root {
-            --primary-color: #c49b63;
-            --secondary-color: #8B0000;
-            --light-color: #f8f9fa;
-            --dark-color: #222;
-            --text-color: #555;
-            --white: #fff;
-            --black: #000;
+            --primary-color: #E8C07D; /* Dorado principal */
+            --secondary-color: #9B4444; /* Rojo terracota */
+            --accent-color: #A1C181; /* Verde oliva */
+            --dark-color: #2D2D2A; /* Gris oscuro */
+            --light-color: #F9F5E8; /* Beige claro */
+            --text-color: #333333;
+            --white: #FFFFFF;
+            --black: #000000;
             --transition: all 0.3s ease;
         }
 
@@ -30,10 +32,16 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Handlee', cursive;
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            background-color: var(--light-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Berkshire Swash', cursive;
+            font-weight: normal;
         }
 
         .container {
@@ -53,11 +61,11 @@
         }
 
         .section-header h2 {
-            font-size: 36px;
-            font-weight: 600;
+            font-size: 42px;
             color: var(--secondary-color);
             margin-bottom: 15px;
             text-transform: capitalize;
+            letter-spacing: 1px;
         }
 
         .section-header h2 span {
@@ -75,30 +83,34 @@
 
         .btn {
             display: inline-block;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             color: var(--white);
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
-            border: 2px solid var(--primary-color);
+            border: 2px solid var(--secondary-color);
             text-transform: capitalize;
+            font-family: 'Berkshire Swash', cursive;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
             background-color: transparent;
-            color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(155, 68, 68, 0.3);
         }
 
         .btn-outline {
             background-color: transparent;
-            color: var(--primary-color);
+            color: var(--secondary-color);
             margin-left: 15px;
         }
 
         .btn-outline:hover {
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             color: var(--white);
         }
 
@@ -115,12 +127,12 @@
             padding: 20px 0;
             z-index: 999;
             transition: var(--transition);
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(45, 45, 42, 0.9);
         }
 
         .navbar.scrolled {
             padding: 15px 0;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(45, 45, 42, 0.95);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
@@ -131,11 +143,13 @@
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             color: var(--white);
             text-decoration: none;
             text-transform: capitalize;
+            font-family: 'Berkshire Swash', cursive;
+            letter-spacing: 1px;
         }
 
         .logo span {
@@ -158,6 +172,23 @@
             font-weight: 500;
             transition: var(--transition);
             text-transform: capitalize;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .nav-links a:hover {
@@ -166,10 +197,11 @@
 
         .reserva-btn {
             background-color: var(--primary-color);
-            color: var(--white);
+            color: var(--dark-color);
             padding: 10px 25px;
             border-radius: 30px;
             transition: var(--transition);
+            border: 2px solid var(--primary-color);
         }
 
         .reserva-btn:hover {
@@ -197,7 +229,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(45, 45, 42, 0.7), rgba(45, 45, 42, 0.7)), url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             text-align: center;
@@ -212,10 +244,10 @@
         }
 
         .hero h1 {
-            font-size: 60px;
-            font-weight: 700;
+            font-size: 64px;
             margin-bottom: 20px;
             text-transform: capitalize;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero h1 span {
@@ -223,8 +255,9 @@
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 30px;
+            font-family: 'Handlee', cursive;
         }
 
         /* Sección Nosotros */
@@ -239,13 +272,14 @@
         }
 
         .about-text h3 {
-            font-size: 28px;
+            font-size: 32px;
             color: var(--secondary-color);
             margin-bottom: 20px;
         }
 
         .about-text p {
             margin-bottom: 15px;
+            font-size: 18px;
         }
 
         .about-image {
@@ -253,6 +287,7 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 5px solid var(--primary-color);
         }
 
         .about-image img {
@@ -274,26 +309,28 @@
 
         .feature {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            background-color: var(--light-color);
+            background-color: var(--white);
             transition: var(--transition);
             flex: 1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(155, 68, 68, 0.1);
         }
 
         .feature:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(155, 68, 68, 0.1);
         }
 
         .feature i {
-            font-size: 30px;
+            font-size: 36px;
             color: var(--primary-color);
             margin-bottom: 15px;
         }
 
         .feature h4 {
-            font-size: 18px;
+            font-size: 20px;
             color: var(--secondary-color);
         }
 
@@ -307,15 +344,17 @@
         }
 
         .tab-btn {
-            padding: 10px 25px;
+            padding: 12px 30px;
             background-color: transparent;
-            border: 1px solid var(--primary-color);
+            border: 2px solid var(--primary-color);
             color: var(--primary-color);
             border-radius: 30px;
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
             text-transform: capitalize;
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 18px;
         }
 
         .tab-btn:hover {
@@ -326,6 +365,7 @@
         .tab-btn.active {
             background-color: var(--primary-color);
             color: var(--white);
+            box-shadow: 0 5px 15px rgba(232, 192, 125, 0.3);
         }
 
         .menu-items {
@@ -356,8 +396,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px dashed #ddd;
+            padding: 25px 0;
+            border-bottom: 1px dashed var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            background-color: rgba(232, 192, 125, 0.1);
+            padding: 25px 15px;
+            border-radius: 5px;
         }
 
         .menu-item:last-child {
@@ -365,21 +412,23 @@
         }
 
         .item-info h3 {
-            font-size: 18px;
+            font-size: 22px;
             color: var(--secondary-color);
             margin-bottom: 5px;
             text-transform: capitalize;
         }
 
         .item-info p {
-            font-size: 14px;
+            font-size: 16px;
             color: var(--text-color);
+            max-width: 80%;
         }
 
         .item-price {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 600;
             color: var(--primary-color);
+            font-family: 'Berkshire Swash', cursive;
         }
 
         /* Sección Galería */
@@ -394,6 +443,13 @@
             border-radius: 10px;
             overflow: hidden;
             height: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(155, 68, 68, 0.2);
         }
 
         .gallery-item img {
@@ -413,7 +469,7 @@
             left: 0;
             width: 100%;
             padding: 20px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            background: linear-gradient(transparent, rgba(45, 45, 42, 0.8));
             transition: var(--transition);
         }
 
@@ -439,6 +495,12 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(155, 68, 68, 0.1);
         }
 
         .testimonial-content {
@@ -458,6 +520,7 @@
         .testimonial-content p {
             font-style: italic;
             margin-bottom: 15px;
+            font-size: 16px;
         }
 
         .rating {
@@ -475,6 +538,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
+            border: 2px solid var(--primary-color);
         }
 
         .testimonial-author h4 {
@@ -535,7 +599,7 @@
             padding: 12px 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-family: inherit;
+            font-family: 'Handlee', cursive;
             font-size: 16px;
             transition: var(--transition);
         }
@@ -545,6 +609,7 @@
         .form-group select:focus {
             outline: none;
             border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(232, 192, 125, 0.2);
         }
 
         .form-group textarea {
@@ -556,6 +621,10 @@
         .map {
             height: 400px;
             width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 5px solid var(--primary-color);
         }
 
         .map iframe {
@@ -566,7 +635,7 @@
 
         /* Footer */
         .footer {
-            background-color: var(--secondary-color);
+            background-color: var(--dark-color);
             color: var(--white);
             padding: 80px 0 0;
         }
@@ -579,7 +648,7 @@
         }
 
         .footer-col h3 {
-            font-size: 22px;
+            font-size: 26px;
             margin-bottom: 25px;
             text-transform: capitalize;
         }
@@ -591,6 +660,7 @@
         .footer-col p {
             margin-bottom: 20px;
             opacity: 0.8;
+            font-size: 16px;
         }
 
         .footer-col ul {
@@ -606,6 +676,7 @@
             text-decoration: none;
             transition: var(--transition);
             opacity: 0.8;
+            font-size: 16px;
         }
 
         .footer-col ul li a:hover {
@@ -634,6 +705,7 @@
         .social-links a:hover {
             background-color: var(--primary-color);
             transform: translateY(-5px);
+            color: var(--dark-color);
         }
 
         .newsletter-form {
@@ -646,14 +718,14 @@
             padding: 12px 15px;
             border: none;
             border-radius: 30px 0 0 30px;
-            font-family: inherit;
+            font-family: 'Handlee', cursive;
             font-size: 14px;
         }
 
         .newsletter-form button {
             width: 50px;
             background-color: var(--primary-color);
-            color: var(--white);
+            color: var(--dark-color);
             border: none;
             border-radius: 0 30px 30px 0;
             cursor: pointer;
@@ -661,7 +733,8 @@
         }
 
         .newsletter-form button:hover {
-            background-color: var(--black);
+            background-color: var(--secondary-color);
+            color: var(--white);
         }
 
         .footer-bottom {
@@ -673,6 +746,17 @@
         .footer-bottom p {
             opacity: 0.8;
             font-size: 14px;
+        }
+
+        /* Animaciones */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
         }
 
         /* Responsive Design */
@@ -688,6 +772,14 @@
             .hero h1 {
                 font-size: 48px;
             }
+
+            .features {
+                flex-wrap: wrap;
+            }
+
+            .feature {
+                min-width: calc(50% - 10px);
+            }
         }
 
         @media (max-width: 768px) {
@@ -697,7 +789,7 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background-color: var(--secondary-color);
+                background-color: var(--dark-color);
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
@@ -733,15 +825,11 @@
             }
             
             .hero p {
-                font-size: 16px;
+                font-size: 18px;
             }
             
             .section-header h2 {
                 font-size: 30px;
-            }
-            
-            .features {
-                flex-direction: column;
             }
             
             .btn-outline {
@@ -770,6 +858,10 @@
             .tab-btn {
                 width: 100%;
             }
+
+            .feature {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -797,10 +889,12 @@
     <!-- Hero Section -->
     <header id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Sabores Yucatecos <span>con Alma</span></h1>
+            <h1 class="floating">Sabores Yucatecos <span>con Alma</span></h1>
             <p>Pizzas artesanales, pan recién horneado y el mejor café rioplatense</p>
-            <a href="#menu" class="btn">Ver Menú</a>
-            <a href="#contacto" class="btn btn-outline">Reservar Mesa</a>
+            <div>
+                <a href="#menu" class="btn">Ver Menú</a>
+                <a href="#contacto" class="btn btn-outline">Reservar Mesa</a>
+            </div>
         </div>
     </header>
 
@@ -1000,7 +1094,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" alt="Pizza artesanal">
+                    <img src="https://images.unsplash.com/photo-1608190003443-86a6a84a2b1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Pan recién horneado">
                     <div class="gallery-overlay">
                         <h3>Pan Recién Horneado</h3>
                     </div>
@@ -1018,7 +1112,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cafetería">
+                    <img src="https://images.unsplash.com/photo-1601050690446-194bc1a6e1d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Horno de leña">
                     <div class="gallery-overlay">
                         <h3>Nuestro Horno de Leña</h3>
                     </div>
@@ -1142,10 +1236,11 @@
         </div>
     </section>
 
-    <!-- Mapa -->
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.324288530138!2d-100.142682924164!3d19.24324378199097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3409e4a6f1a85%3A0x8a6f51c2b5a5f5a5!2sPaseo%20Acatitl%C3%A1n%20S%2FN%20Km%203%2C%20Valle%20de%20Bravo!5e0!3m2!1ses!2smx!4v1689876423581!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+     <!-- Mapa actualizado -->
+<!-- Reemplaza la sección del mapa en tu código con esto: -->
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.203944647184!2d-100.1022274!3d19.1985107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd63002262e23d%3A0x30d098ee1d8539e3!2sBenicio%20Casa%20de%20Pan!5e0!3m2!1ses!2smx!4v1689876423581!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
     <!-- Footer -->
     <footer class="footer">
